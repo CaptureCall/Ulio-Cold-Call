@@ -51,6 +51,9 @@ def start_call():
     return {
         "status_code": response.status_code,
         "ulio_response": response.text,
+        "debug_shop_id_used": ULIO_SHOP_ID,
+        "debug_api_key_length": len(ULIO_API_KEY),
+        "debug_api_key_last_4": ULIO_API_KEY[-4:] if len(ULIO_API_KEY) >= 4 else "TOO_SHORT",
     }
 
 
